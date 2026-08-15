@@ -1,0 +1,149 @@
+body {
+    padding: 102px 193px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif, Arial;
+}
+
+.box_movie_search {
+    margin-bottom: 78px;
+}
+
+.movie_input {
+    padding-left: 15px;
+    width: 500px;
+    height: 60px;
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.movie_input:focus {
+    outline: none;
+}
+
+.movie_btn {
+    margin-left: 24px;
+    width: 250px;
+    height: 63px;
+    background-color: #0094FF;
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.empty {
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.film_list {
+    margin-bottom: 65px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 65px;
+    cursor: pointer;
+}
+
+.film_list:hover {
+    padding: 30px;
+    width: 100%;
+    /* height: 216px; */
+    border-radius: 35px;
+    background-color: #D9D9D9;
+    z-index: -1;
+}
+
+.film_poster {
+    width: 100px;
+    height: 150px;
+}
+
+.film__title {
+    margin-bottom: 7px;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.film__year {
+    margin-bottom: 18px;
+    color: #0094FF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.film__type {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup_open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_content {
+    /* position: relative; */
+    box-sizing: border-box;
+    /* text-align: center; */
+    border-radius: 10px;
+    width: 991px;
+    height: 525px;
+    overflow-y: auto;
+    padding: 50px 50px 50px 60px;
+    background-color: #FFF;
+    z-index: 1000;
+}
+
+.popup_title {
+    margin-bottom: 150px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.popup_close {
+    /* position: absolute; */
+    right: 32px;
+    top: 32px;
+    width: 50px;
+    height: 50px;
+    /* background-image: url('resourses/ic-close.png'); */
+    cursor: pointer;
+}
