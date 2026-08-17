@@ -144,8 +144,20 @@ function renderFilmDetails(film) {
     }
 
     clone.querySelector('.popup_film_title').textContent = film.Title || 'Н/Д';
-    clone.querySelector('.popup_film_year').textContent = film.Year || 'Н/Д';
-    clone.querySelector('.popup_film_rated').textContent = film.Rated || 'Н/Д';
+    clone.querySelector('.popup_film_year_value').textContent = film.Year || 'Н/Д';
+    clone.querySelector('.popup_film_rated_value').textContent = film.Rated || 'Н/Д';
+
+    clone.querySelector('.popup_film_realease_value').textContent = film.Released || 'Н/Д';
+    clone.querySelector('.popup_film_runtime_value').textContent = film.Runtime || 'Н/Д';
+    clone.querySelector('.popup_film_genre_value').textContent = film.Genre || 'Н/Д';
+    clone.querySelector('.popup_film_director_value').textContent = film.Director || 'Н/Д';
+    clone.querySelector('.popup_film_writer_value').textContent = film.Writer || 'Н/Д';
+    clone.querySelector('.popup_film_actors_value').textContent = film.Actors || 'Н/Д';
+
+    clone.querySelector('.popup_film_plot').textContent = film.Plot || 'Н/Д';
+
+
+
     // clone.querySelector('.film-details__director').textContent = film.Director || 'Н/Д';
     // clone.querySelector('.film-details__actors').textContent = film.Actors || 'Н/Д';
     // clone.querySelector('.film-details__rating').textContent = film.imdbRating || 'Н/Д';

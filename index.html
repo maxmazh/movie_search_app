@@ -24,29 +24,61 @@
 
     <div class="js_popup popup">
         <div class="js_popup_content popup_content">
-            <button class="js_popup_close popup_close">закрыть</button>
+
+            <button class="js_popup_close popup_close">← Назад к поиску</button>
 
             <div class="js_film_details_container popup_wrapper">
-                
-                <template id="filmDetailsStructure">
-
-                    <div class="popup_row">
-                        <div class="popup_film_poster">
-                            <img class="img_popup_film_poster" src="" alt="Постер фильма">
-                        </div>
-                        <div class="popup_description_film">
-                            <h1 class="popup_film_title"></h1>
-                            <p class="popup_film_year"></p>
-                            <p class="popup_film_rated"></p>
-                        </div>
-                    </div>
-
-                    <div class="popup_colomn">
-                        <p></p>
-                    </div>
-                    
-                </template>
             </div>
+                
+            <template id="filmDetailsStructure">
+
+                <div class="popup_row">
+                    <div class="popup_film_poster">
+                        <img class="img_popup_film_poster" src="" alt="Постер фильма">
+                    </div>
+                    <div class="popup_description_film">
+                        <h1 class="popup_film_title"></h1>
+                        <p class="popup_film_year">
+                            <span class="popup_film_year_label">Год:</span>
+                            <span class="popup_film_year_value"></span>
+                        </p>
+                        <p class="popup_film_rated">
+                            <span class="popup_film_rated_label">Рейтинг:</span>
+                            <span class="popup_film_rated_value"></span>
+                        </p>
+                        <p class="popup_film_realease">
+                            <span class="popup_film_realease_label">Дата выхода:</span>
+                            <span class="popup_film_realease_value"></span>
+                        </p>
+                        <p class="popup_film_runtime">
+                            <span class="popup_film_runtime_label">Продолжительность:</span>
+                            <span class="popup_film_runtime_value"></span>
+                        </p>
+                        <p class="popup_film_genre">
+                            <span class="popup_film_genre_label">Жанр:</span>
+                            <span class="popup_film_genre_value"></span>
+                        </p>
+                        <p class="popup_film_director">
+                            <span class="popup_film_director_label">Режиссер:</span>
+                            <span class="popup_film_director_value"></span>
+                        </p>
+                        <p class="popup_film_writer">
+                            <span class="popup_film_writer_label">Сценарий:</span>
+                            <span class="popup_film_writer_value"></span>
+                        </p>
+                        <p class="popup_film_actors">
+                            <span class="popup_film_actors_label">Актеры:</span>
+                            <span class="popup_film_actors_value"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="popup_colomn">
+                    <p class="popup_film_plot"></p>
+                </div>
+                
+            </template>
+            
         </div>
     </div>
 
