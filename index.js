@@ -94,7 +94,7 @@ function addFilm(apiFilm) {
     films.push({
         title: apiFilm.Title,
         year: apiFilm.Year,
-        type: apiFilm.Type,
+        type: getFilmType(apiFilm.Type),
         img: apiFilm.Poster,
         imdbID: apiFilm.imdbID
     });
@@ -155,25 +155,25 @@ function renderFilmDetails(film) {
     clone.querySelector('.popup_film_actors_value').textContent = film.Actors || 'Н/Д';
 
     clone.querySelector('.popup_film_plot').textContent = film.Plot || 'Н/Д';
-
-
-
-    // clone.querySelector('.film-details__director').textContent = film.Director || 'Н/Д';
-    // clone.querySelector('.film-details__actors').textContent = film.Actors || 'Н/Д';
-    // clone.querySelector('.film-details__rating').textContent = film.imdbRating || 'Н/Д';
-    // clone.querySelector('.film-details__country').textContent = film.Country || 'Н/Д';
-    // clone.querySelector('.film-details__language').textContent = film.Language || 'Н/Д';
-    // clone.querySelector('.film-details__awards').textContent = film.Awards || 'Н/Д';
-    
-    // const imdb = clone.querySelector('.film-details__imdb-id');
-    // if (film.imdbID) {
-    //     imdb.textContent = `🔗 imdbID: ${film.imdbID}`;
-    // } else {
-    //     imdb.style.display = 'none';
-    // }
     
     detailsContent.innerHTML = '';
     detailsContent.appendChild(clone);
+}
+
+function getFilmType(type) {
+    if (type === 'movie') {
+        return 'Фильм';
+    }
+
+    if (type === 'series') {
+        return 'Сериал';
+    }
+
+    if (type === 'game') {
+        return 'Игра';
+    }
+
+    return type;
 }
 
 btnMovie.addEventListener('click', function() {
@@ -200,3 +200,12 @@ popupNode.addEventListener('click', (event) => {
 
 // btnOpenNode.addEventListener('click', togglePopup);
 btnCloseNode.addEventListener('click', togglePopup);
+
+document.addEventListener('keydown', function(event) {
+    if (
+        event.key === 'Escape' &&
+        popupNode.classList.contains(POPUP_OPENED_CLASSNAME)
+    ) {
+        togglePopup();
+    }
+});
