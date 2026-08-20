@@ -19,9 +19,7 @@
 }
 
 .popup_content {
-    /* position: relative; */
     box-sizing: border-box;
-    /* text-align: center; */
     border-radius: 10px;
     width: 90%;
     height: 90%;
